@@ -5,7 +5,7 @@
   "scripts": {
     "test": "wdio run wdio.conf.js"
   },
-  "author": "",
+  "author": "Matheus dos santos neves",
   "license": "ISC",
   "keywords": [],
   "description": "",
