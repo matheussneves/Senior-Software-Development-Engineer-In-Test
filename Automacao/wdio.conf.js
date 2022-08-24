@@ -1,6 +1,17 @@
 const path = require('path');
 
 exports.config = {
+    //
+    // ====================
+    // Runner Configuration
+    // ====================
+    //
+    port: 4723,
+    //
+    // ============
+    // Capabilities
+    // ============
+    //
     capabilities: [{
         platformName: 'android',
         "appium:deviceName": 'Pixel_4_XL_API_30',
@@ -9,14 +20,25 @@ exports.config = {
         "appium:appPackage": 'io.platformbuilders.challenge.qa',
         "appium:automationName": 'UIAutomator2'
     }],
-    port: 4723,
-    
-    specs: [
+   
+    //
+    // Set a base URL in order to shorten url command calls. If your `url` parameter starts
+    // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
+    // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
+    // gets prepended directly.
+    baseUrl: 'http://localhost',
+    // Patterns to exclude.
+    exclude: [],
+    //
+     specs: [
         './features/**/*.feature'
     ],
-    
     maxInstances: 10,
-    
+    //
+    // If you have trouble getting all important capabilities together, check out the
+    // Sauce Labs platform configurator - a great tool to configure your capabilities:
+    // https://saucelabs.com/platform/platform-configurator
+    //
     
     //
     // ===================
@@ -45,7 +67,6 @@ exports.config = {
     // bail (default is 0 - don't bail, run all tests).
     bail: 0,
     
-    baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -61,16 +82,14 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    
-    services: [
-        ['appium', {
-            command : 'appium'
-        }]
-    ],
-
-    port: 4723,
+    services: ['appium'],
     path: '/wd/hub',
-    
+    // Framework you want to run your specs with.
+    // The following are supported: Mocha, Jasmine, and Cucumber
+    // see also: https://webdriver.io/docs/frameworks
+    //
+    // Make sure you have the wdio adapter package for the specific framework installed
+    // before running any tests.
     framework: 'cucumber',
     //
     // The number of times to retry the entire specfile when it fails as a whole
@@ -94,15 +113,15 @@ exports.config = {
         // <string[]> (file/dir) require files before executing features
         require: ['./features/step_definitions/stepdefs.js'],
         // <boolean> show full backtrace for errors
-        backtrace: true,
+        backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         requireModule: [],
         // <boolean> invoke formatters without executing steps
-        dryRun: true,
+        dryRun: false,
         // <boolean> abort the run on first failure
         failFast: false,
         // <boolean> hide step definition snippets for pending steps
-        snippets: false,
+        snippets: true,
         // <boolean> hide source uris
         source: true,
         // <boolean> fail if there are any undefined or pending steps

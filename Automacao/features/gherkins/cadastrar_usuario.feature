@@ -1,6 +1,3 @@
-# encoding: utf-8
-# language:en
-
 Feature: Cadastrar usuario
   Como cliente do Sowe
   Quero acessar a tela de cadastro

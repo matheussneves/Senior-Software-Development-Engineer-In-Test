@@ -1,6 +1,3 @@
-# encoding: utf-8
-# language:en
-
 Feature: Exibir a tela inicial do aplicativo
   Como cliente do Sowe
   Quero visualizar a tela inicial do aplicatico
