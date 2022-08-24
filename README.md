@@ -16,7 +16,7 @@ Comandos :
 Atualizar dependencias: <br>
 npm i<br>
 
-Verifica ambiante:<br>
+Verifica ambiente:<br>
 npx appium-doctor --android
 
 Executar teste: <br>
