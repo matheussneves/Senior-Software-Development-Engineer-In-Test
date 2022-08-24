@@ -21,9 +21,9 @@ Funcionalidade: Cadastrar usuario
 
     @Automatizado
     Cenário: Negar localização
-      Quando preencher o campo de numero de celular "11931006056"
+      Quando preencher o campo de numero de celular com "11931006056"
       E clicar no botão avançar
-      E preencher o campo de nome "Matheus Dos Santos Neves"
+      E preencher o campo de nome com "Matheus Dos Santos Neves"
       E clicar no botão avançar
       E "negar" a localização
       Então verificar não avança no cadastro

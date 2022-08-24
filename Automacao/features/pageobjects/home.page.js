@@ -1,8 +1,6 @@
 class HomePage {
-    
-    get tbxCaselular() {
-        return $('~insira o numero de celular');
+    get btncadastrar() {
+        return $('~Cadastrar');
     }
-   
 }
 module.exports = new HomePage();

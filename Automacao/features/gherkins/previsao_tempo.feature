@@ -38,7 +38,7 @@ Funcionalidade: Exibir a tela inicial do aplicativo
         | "08/22/22"              |
 
     
-  @Automatizado      
+  @Manual      
   Cenário: Validar botão sair
     Então verificar que o layout da tela "Sowe" é exibido conforme figma
 
