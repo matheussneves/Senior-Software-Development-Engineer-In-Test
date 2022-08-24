@@ -11,13 +11,13 @@ Feature: Exibir a tela inicial do aplicativo
     And preencher o campo de nome com "Matheus Dos Santos Neves"
     And clicar no botão avançar
     And "permitir" a localização
-    And verificar que o app exibe a tela de previsão do tempo
   
   @Automatizado
   Scenario: Validar as informações da tepa de previsão do tempo
+    When verificar que o app exibe a tela de previsão do tempo
     Then verificar que campos <campos> são exibido com o valor correto
 
-    Exemplos:
+    Examples:
         | campos                  |
         | "Sowe"                  |
         | "Bairro do Clima Bom"   |
@@ -37,5 +37,6 @@ Feature: Exibir a tela inicial do aplicativo
     
   @Manual      
   Scenario: Validar botão sair
+    When verificar que o app exibe a tela de previsão do tempo
     Then verificar que o layout da tela "Sowe" é exibido conforme figma
   

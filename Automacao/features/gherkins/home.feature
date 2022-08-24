@@ -13,7 +13,7 @@ Feature: Exibir a tela inicial do aplicativo
         When acessar a home do Sowe
          Then verificar que os <campos> de titulo, subtitulo e os botões de cadastrar e entrar são exibidos corretamente
 
-         Exemplos:
+         Examples:
              |   campos                                                                                            |
              |   "Explore climas locais socialmente, com o Sowe"                                                   |
              |   "Saiba quantas pessoas próximas a você reportaram chuva e receba um aviso antes de sair de casa." |

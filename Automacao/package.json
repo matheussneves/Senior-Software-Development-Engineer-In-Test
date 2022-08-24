@@ -12,6 +12,7 @@
     "dependencies": {
         "@tsconfig/node12": "^1.0.11",
         "appium": "^2.0.0-beta.43",
+        "appium-doctor": "^1.16.0",
         "tsconfig": "^7.0.0",
         "wdio": "^6.0.1"
     },

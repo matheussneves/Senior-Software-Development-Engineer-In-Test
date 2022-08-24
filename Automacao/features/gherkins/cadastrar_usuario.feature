@@ -77,7 +77,7 @@ Feature: Cadastrar usuario
       And preencher o campo nome com <nome>
       Then verificar que o APP <acao> para a etapa localização
 
-      Exemplos:
+      Examples:
       | nome              | acao          |
       | "Matheus Neves"   | "Avança"      |
       | "Matheus"         | "Não avança"  |
