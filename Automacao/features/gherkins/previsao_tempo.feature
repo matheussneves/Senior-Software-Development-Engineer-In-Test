@@ -1,24 +1,24 @@
 # encoding: utf-8
-# language:pt
+# language:en
 
-Funcionalidade: Exibir a tela inicial do aplicativo
+Feature: Exibir a tela inicial do aplicativo
   Como cliente do Sowe
   Quero visualizar a tela inicial do aplicatico
   Para que possa logar no APP
 
-  Contexto: Acessar a tela de previsão do tempo
-    * acessar a home do Sowe
-    * clicar em "Cadastrar"
-    * preencher o campo de numero de celular com "11931006056"
-    * clicar no botão avançar
-    * preencher o campo de nome com "Matheus Dos Santos Neves"
-    * clicar no botão avançar
-    * "permitir" a localização
-    * verificar que o app exibe a tela de previsão do tempo
+  Background: Acessar a tela de previsão do tempo
+    Given acessar a home do Sowe
+    And clicar em "Cadastrar"
+    And preencher o campo de numero de celular com "11931006056"
+    And clicar no botão avançar
+    And preencher o campo de nome com "Matheus Dos Santos Neves"
+    And clicar no botão avançar
+    And "permitir" a localização
+    And verificar que o app exibe a tela de previsão do tempo
   
   @Automatizado
-  Cenário: Validar as informações da tepa de previsão do tempo
-    Então verificar que campos <campos> são exibido com o valor correto
+  Scenario: Validar as informações da tepa de previsão do tempo
+    Then verificar que campos <campos> são exibido com o valor correto
 
     Exemplos:
         | campos                  |
@@ -39,9 +39,6 @@ Funcionalidade: Exibir a tela inicial do aplicativo
 
     
   @Manual      
-  Cenário: Validar botão sair
-    Então verificar que o layout da tela "Sowe" é exibido conforme figma
-
-  
-
+  Scenario: Validar botão sair
+    Then verificar que o layout da tela "Sowe" é exibido conforme figma
   
