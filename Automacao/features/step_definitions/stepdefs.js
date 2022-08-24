@@ -1,9 +1,11 @@
-const HomePage = require('../pageobjects/home.page.js');
-const CadastroPage = require('../pageobjects/cadastrar.page.js');
-const TempoPage = require('../pageobjects/tempo.page.js');
 const { Given, When, Then } = require('@wdio/cucumber-framework');
+const HomePage = require('../pageobjects/home.js');
+const CadastroPage = require('../pageobjects/cadastrar.js');
+const TempoPage = require('../pageobjects/tempo.js');
 
-Given('acessar a home do Sowe', () => {
+
+Given(/^acessar a home do Sowe$/, async () => {
+    driver.installApp('/Users/matheusneves/Documents/git/Senior-Software-Development-Engineer-In-Test/Automacao/app/app.apk');
     driver.isAppInstalled("io.platformbuilders.challenge.qa");
     driver.launchApp();
     driver.activateApp('io.platformbuilders.challenge.qa');

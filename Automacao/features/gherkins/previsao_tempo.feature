@@ -1,7 +1,7 @@
-Feature: Exibir a tela inicial do aplicativo
+Feature: Exibir a tela principal do aplicativo
   Como cliente do Sowe
-  Quero visualizar a tela inicial do aplicatico
-  Para que possa logar no APP
+  Quero visualizar a tela principal do aplicatico
+  Para que possa ver o tempo
 
   Background: Acessar a tela de previsão do tempo
     Given acessar a home do Sowe
@@ -13,7 +13,7 @@ Feature: Exibir a tela inicial do aplicativo
     And "permitir" a localização
   
   @Automatizado
-  Scenario: Validar as informações da tepa de previsão do tempo
+  Scenario Outline: Validar as informações da tepa de previsão do tempo
     When verificar que o app exibe a tela de previsão do tempo
     Then verificar que campos <campos> são exibido com o valor correto
 
@@ -36,7 +36,7 @@ Feature: Exibir a tela inicial do aplicativo
 
     
   @Manual      
-  Scenario: Validar botão sair
+  Scenario Outline: Validar layout
     When verificar que o app exibe a tela de previsão do tempo
     Then verificar que o layout da tela "Sowe" é exibido conforme figma
   

@@ -1,23 +1,18 @@
-const path = require('path');
-
 exports.config = {
     capabilities: [{
         platformName: 'android',
         "appium:deviceName": 'Pixel_4_XL_API_30',
-        "appium:udid": 'emulator-5554',
-        "appium:systemPort": 8201,
-        "appium:app": path.join(process.cwd(), './app/app.apk'),
+        "appium:app": '/Users/matheusneves/Documents/git/Senior-Software-Development-Engineer-In-Test/Automacao/app/app.apk',
         "appium:automationName": 'UIAutomator2'
     }],
     baseUrl: 'http://localhost',
     port: 4723,
-    path: '/wd/hub',
     
     specs: [
         './features/**/*.feature'
     ],
     
-    maxInstances: 10,
+    maxInstances: 1,
     
     
     //
@@ -64,9 +59,15 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     
-    services: ['appium'
+    services: [
+        ['appium', {
+                args: {
+                    debugLogSpacing: true,
+                },
+                command: 'appium',
+            },
+        ],
     ],
-
     
     framework: 'cucumber',
     //
@@ -103,7 +104,7 @@ exports.config = {
         // <boolean> hide source uris
         source: true,
         // <boolean> fail if there are any undefined or pending steps
-        strict: false,
+        strict: true,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
         tagExpression: '@Automatizado',
         // <number> timeout for step definitions
