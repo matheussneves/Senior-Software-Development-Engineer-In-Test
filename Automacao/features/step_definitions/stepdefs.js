@@ -4,11 +4,11 @@ const CadastroPage = require('../pageobjects/cadastrar.js');
 const TempoPage = require('../pageobjects/tempo.js');
 
 
-Given(/^acessar a home do Sowe$/, async () => {
-    await driver.isAppInstalled("io.platformbuilders.challenge.qa");
-    await driver.launchApp();
-    await driver.activateApp('io.platformbuilders.challenge.qa');
-    await HomePage.btncadastrar.isDisplayed();
+Given('acessar a home do Sowe', () => {
+    driver.isAppInstalled("io.platformbuilders.challenge.qa");
+    driver.launchApp();
+    driver.activateApp('io.platformbuilders.challenge.qa');
+    HomePage.btncadastrar.isDisplayed();
 });
 
 When('verificar que os {string} de titulo, subtitulo e os botões de cadastrar e entrar são exibidos corretamente', (campos) => {

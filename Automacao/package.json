@@ -24,7 +24,7 @@
     },
     "devDependencies": {
         "@badisi/wdio-harness": "^1.0.5",
-        "@wdio/appium-service": "^8.0.0-alpha.249",
+        "@wdio/appium-service": "^7.23.0",
         "@wdio/cli": "^7.23.0",
         "@wdio/cucumber-framework": "^7.23.0",
         "@wdio/local-runner": "^7.23.0",

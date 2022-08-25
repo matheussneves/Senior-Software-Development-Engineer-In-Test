@@ -1,9 +1,9 @@
 exports.config = {
     capabilities: [{
-        platformName: 'android',
+        platformName: 'Android',
         "appium:deviceName": 'Pixel_4_XL_API_30',
         "appium:app": './app/app.apk',
-        "appium:automationName": 'UIAutomator2'
+        "appium:automationName": 'uiautomator2'
     }],
     baseUrl: 'http://localhost',
     port: 4723,
@@ -11,9 +11,9 @@ exports.config = {
     specs: [
         './features/**/*.feature'
     ],
-    
+    noReset: true,
+    fullReset: false,
     maxInstances: 1,
-    
     
     //
     // ===================
@@ -58,16 +58,13 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    
     services: [
-        ['appium', {
-                args: {
-                    debugLogSpacing: true,
-                },
-                command: 'appium',
-            },
-        ],
+        'appium'
     ],
+    appium: {
+        command: 'appium',
+        args: {},
+    },
     
     framework: 'cucumber',
     //
@@ -83,7 +80,14 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['cucumberjs-json'],
+    reporters: [
+        [
+            'cucumberjs-json', {
+            jsonFolder: './reports/json',
+            language: 'en',
+        }
+        ]
+    ],
 
 
     //
