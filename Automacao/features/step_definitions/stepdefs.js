@@ -5,7 +5,6 @@ const TempoPage = require('../pageobjects/tempo.js');
 
 
 Given(/^acessar a home do Sowe$/, async () => {
-    driver.installApp('/Users/matheusneves/Documents/git/Senior-Software-Development-Engineer-In-Test/Automacao/app/app.apk');
     driver.isAppInstalled("io.platformbuilders.challenge.qa");
     driver.launchApp();
     driver.activateApp('io.platformbuilders.challenge.qa');

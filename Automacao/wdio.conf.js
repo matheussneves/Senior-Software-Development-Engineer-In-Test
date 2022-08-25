@@ -2,7 +2,7 @@ exports.config = {
     capabilities: [{
         platformName: 'android',
         "appium:deviceName": 'Pixel_4_XL_API_30',
-        "appium:app": '/Users/matheusneves/Documents/git/Senior-Software-Development-Engineer-In-Test/Automacao/app/app.apk',
+        "appium:app": './app/app.apk',
         "appium:automationName": 'UIAutomator2'
     }],
     baseUrl: 'http://localhost',
